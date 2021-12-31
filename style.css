@@ -1,0 +1,263 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    background: url(./images/bg-intro-desktop.png) no-repeat center center /cover;
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.pink-overlay {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: hsl(0, 100%, 74%);
+    z-index: -1;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    height: 70%;
+    margin: 100px auto;
+}
+
+.left-section {
+    padding-top: 120px;
+    color: #fff;
+}
+
+.left-section h1 {
+    font-size: 48px;
+    width: 80%; 
+}
+.left-section p {
+    width: 85%;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.btn {
+    display: block;
+    width: 80%;
+    padding: 15px;
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    margin: 20px auto;
+    border: none;
+    
+}
+
+.btn-blue {
+    box-shadow: 0px 6px 0px hsla(249, 10%, 26%, 0.2);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.btn-green {
+    width: 100%;
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid hsl(246, 25%, 77%);
+    border-bottom: 2px solid hsl(129, 59%, 51%);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-green:hover {
+    background-color: hsl(154, 59%, 46%); 
+}
+
+form {
+    width: 80%;
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px hsla(249, 10%, 26%, 0.2);
+}
+
+form div {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input:focus {
+    outline: none;
+    border: 1.5px solid hsl(248, 32%, 49%);
+    box-shadow: 0px -0.4px 1px hsl(248, 32%, 49%);
+}
+
+input[type = submit]:focus {
+    border: 2px solid hsl(154, 59%, 51%);
+}
+
+.error-icon {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    z-index: 50;
+    opacity: 0;
+}
+
+.error-message {
+    color: hsl(0, 100%, 74%);
+    font-size: 11px;
+    text-align: right;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+form p {
+    font-size: 11px;
+    text-align: center;
+    font-weight: 500;
+    color: hsl(246, 25%, 77%);
+    font-family: 'Roboto', sans-serif;
+    
+}
+.tac {
+    color:hsl(0, 100%, 74%);
+}
+
+.email-placeholder::placeholder {
+    color: hsl(0, 100%, 74%);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+
+.error-red {
+    box-shadow: 1.5px 1.5px 1px hsl(0, 100%, 74%), -1px -1px 1px hsl(0, 100%, 74%);
+}
+
+
+@media screen and (max-width:600px){
+    body, html {
+        background: url(./images/bg-intro-mobile.png);
+        max-width: 100%;
+        max-height: 100%;
+    }
+    p {
+        display: block;
+        margin: auto;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+        width: 95%;
+        height: 90%;
+        margin: 50px auto;
+    }
+    .left-section {
+        padding-top: 20px;
+        text-align: center;
+        margin: auto;
+    }
+    .left-section h1 {
+        display: block;
+        font-size: 26px;
+        width: 80%;
+        margin: auto;
+        letter-spacing: 1.5px;
+    }
+    .left-section p {
+        font-size: 16px;
+        width: 80%;
+        margin: 20px auto;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .btn {
+        width: 90%;
+        padding: 20px 60px;
+        line-height: 1.5;
+    }
+
+    .btn-green {
+        width: 100%;
+        padding: 0px;
+        margin: 10px auto;
+
+    }
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+    input {
+        font-size: 16px;
+        height: 50px;
+        margin-bottom: 12px; 
+    }
+
+    .error-icon  {
+        top: 6px;
+        padding: 8px;
+    }
+
+    form p {
+        width: 80%;
+        line-height: 1.5;
+    }
+
+    .email-placeholder::placeholder {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (min-width:601px) and (max-width: 950px){
+    .left-section h1 {
+        font-size: 36px;
+        width: 100%;
+    }
+    .btn {
+        width: 90%;
+    }
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
